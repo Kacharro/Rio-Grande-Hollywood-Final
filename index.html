@@ -1,0 +1,2451 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Rio Grande Steakhouse Hollywood offers Brazilian-style tableside grilled meats, lunch, dinner, weekend brunch, drinks, desserts, and reservations in Hollywood, Florida."
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .hover-card {
+          --hover-y: 0px;
+          --hover-scale: 1;
+          transform-origin: top center;
+          transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
+        }
+        .hover-card:hover {
+          --hover-y: -6px;
+          --hover-scale: 1.045;
+          box-shadow: 0 28px 54px -18px rgba(0, 0, 0, 0.85);
+        }
+      }
+      .scroll-blend {
+        --reveal-y: 42px;
+        opacity: 0;
+        filter: blur(12px);
+        transform: translateY(calc(var(--reveal-y) + var(--hover-y, 0px)))
+          scaleY(var(--hover-scale, 1));
+        transition:
+          opacity 800ms ease,
+          filter 800ms ease,
+          transform 800ms ease;
+        will-change: opacity, filter, transform;
+      }
+      .scroll-blend:nth-child(2) {
+        transition-delay: 80ms;
+      }
+      .scroll-blend:nth-child(3) {
+        transition-delay: 140ms;
+      }
+      .scroll-blend:nth-child(4) {
+        transition-delay: 200ms;
+      }
+      .scroll-blend.is-visible {
+        --reveal-y: 0px;
+        opacity: 1;
+        filter: blur(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .scroll-blend,
+        .scroll-blend.is-visible {
+          opacity: 1;
+          filter: none;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#3d3835",
+              "tertiary-fixed-dim": "#f0bd8b",
+              "tertiary-fixed": "#ffdcbd",
+              "surface-container-low": "#1f1b18",
+              "surface-dim": "#161310",
+              "on-tertiary-fixed": "#2c1600",
+              secondary: "#ffb956",
+              primary: "#ffb693",
+              "on-tertiary-container": "#402300",
+              outline: "#a68b7f",
+              "on-tertiary-fixed-variant": "#623f18",
+              "on-surface": "#eae1db",
+              "on-tertiary": "#482904",
+              "surface-container": "#231f1c",
+              error: "#ffb4ab",
+              "primary-fixed": "#ffdbcc",
+              "on-background": "#eae1db",
+              background: "#161310",
+              "surface-container-high": "#2e2926",
+              "error-container": "#93000a",
+              "inverse-primary": "#a04100",
+              "surface-container-highest": "#393430",
+              "on-primary-fixed": "#351000",
+              "on-error": "#690005",
+              "primary-container": "#e66e2a",
+              "surface-tint": "#ffb693",
+              "on-secondary": "#452b00",
+              "outline-variant": "#574238",
+              "on-primary-container": "#4b1b00",
+              "on-primary-fixed-variant": "#7a3000",
+              "surface-variant": "#393430",
+              surface: "#161310",
+              "inverse-on-surface": "#342f2c",
+              "surface-container-lowest": "#110d0b",
+              "secondary-fixed": "#ffddb5",
+              "on-secondary-fixed": "#2a1800",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#ffb693",
+              "tertiary-container": "#b5885a",
+              tertiary: "#f0bd8b",
+              "inverse-surface": "#eae1db",
+              "on-primary": "#562000",
+              "on-secondary-fixed-variant": "#633f00",
+              "secondary-container": "#c58311",
+              "secondary-fixed-dim": "#ffb956",
+              "on-surface-variant": "#dec0b3",
+              "on-secondary-container": "#3d2500",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-xl": "2rem",
+              "space-md": "1rem",
+              "gutter-desktop": "2rem",
+              "gutter-mobile": "1rem",
+              "space-lg": "1.5rem",
+              "space-3xl": "4.5rem",
+              "container-max": "80rem",
+              "space-4xl": "6rem",
+              "space-xs": "0.5rem",
+              "space-2xl": "3rem",
+              "space-2xs": "0.25rem",
+              "space-sm": "0.75rem",
+            },
+            fontFamily: {
+              "headline-lg": ["Playfair Display"],
+              "body-sm": ["Hanken Grotesk"],
+              "headline-sm": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "label-caps": ["Hanken Grotesk"],
+              "body-lg": ["Hanken Grotesk"],
+              "label-md": ["Hanken Grotesk"],
+              "body-md": ["Hanken Grotesk"],
+              "display-hero": ["Playfair Display"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "display-hero-mobile": ["Playfair Display"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "44px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-sm": [
+                "22px",
+                {
+                  lineHeight: "30px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                { lineHeight: "36px", letterSpacing: "0em", fontWeight: "500" },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.12em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg-mobile": [
+                "30px",
+                { lineHeight: "38px", letterSpacing: "0em", fontWeight: "500" },
+              ],
+              "display-hero-mobile": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.65)]"
+    >
+      <div
+        class="h-20 max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"
+      >
+        <div class="flex items-center gap-space-md">
+          <a
+            class="flex items-center gap-space-sm"
+            data-path="experience"
+            href="#"
+            ><img
+              alt="Brand logo. - Primary color: #e06a26
+- Font: playfairDisplay
+- Mode: dark
+- Roundness: rounded-sm
+"
+              class="h-16 w-16 object-cover rounded-full shadow-md ring-1 ring-secondary/40"
+              src="./img/logo.jpg"
+            />
+            <div class="hidden sm:flex flex-col">
+              <span
+                class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none"
+                >Rio Grande</span
+              ><span
+                class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-space-2xs"
+                >Steakhouse Hollywood</span
+              >
+            </div></a
+          >
+        </div>
+        <nav
+          class="hidden xl:flex items-center gap-space-lg"
+          data-active-classes="text-secondary border-b border-secondary pb-space-2xs font-label-md"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors text-secondary border-b border-secondary pb-space-2xs font-label-md"
+            data-path="menu"
+            href="#menu"
+            >Menu</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="drinks"
+            href="#drinks"
+            >Drinks</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="desserts"
+            href="#desserts"
+            >Desserts</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="location-and-hours"
+            href="#location-and-hours"
+            >Location &amp; Hours</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <a
+            class="hidden md:flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors"
+            href="tel:7542605809"
+            ><span class="material-symbols-outlined text-secondary text-[18px]"
+              >call</span
+            ><span>(754) 260-5809</span></a
+          ><a
+            class="inline-flex items-center justify-center h-11 px-space-lg rounded-DEFAULT bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_0_20px_-4px_rgba(230,110,42,0.5)] hover:bg-secondary hover:text-on-secondary transition-all"
+            data-path="reservations"
+            href="https://wa.me/13057241434?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Rio%20Grande%20Churrascaria."
+            rel="noopener"
+            target="_blank"
+            >Reserve a Table</a
+          ><button
+            class="inline-flex items-center justify-center h-11 px-space-md rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors"
+            id="language-toggle"
+            type="button"
+          >
+            Español
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-background min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Hero Section -->
+        <section
+          class="relative w-full overflow-hidden -mt-20 pt-28 pb-16 lg:pb-24 bg-surface-dim"
+        >
+          <!-- Atmospheric Background Glows -->
+          <div
+            class="absolute -top-32 right-1/4 w-[38rem] h-[38rem] rounded-full bg-primary-container/10 blur-[130px] pointer-events-none"
+          ></div>
+          <div
+            class="absolute bottom-10 left-10 w-[24rem] h-[24rem] rounded-full bg-secondary-container/10 blur-[100px] pointer-events-none"
+          ></div>
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop relative z-10"
+          >
+            <!-- Top Pill & Trust Indicator -->
+            <div class="flex flex-wrap items-center gap-space-sm mb-space-lg">
+              <div
+                class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high text-secondary shadow-md"
+              >
+                <span
+                  class="material-symbols-outlined text-[16px]"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface"
+                  >4.9 Star Rating, 2,232+ Verified Google Reviews</span
+                >
+              </div>
+              <div
+                class="hidden sm:inline-flex items-center gap-space-2xs px-space-sm py-1.5 rounded-full bg-surface-container text-outline font-label-caps text-label-caps uppercase tracking-wider"
+              >
+                <span>Hollywood, FL</span>
+                <span>|</span>
+                <span class="text-primary">$30-$50 per person</span>
+                <span>|</span>
+                <span>Open Daily to 11 PM</span>
+              </div>
+            </div>
+            <!-- Hero Grid: Editorial Typography + Feast Showcase -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"
+            >
+              <!-- Text Column -->
+              <div
+                class="scroll-blend lg:col-span-6 flex flex-col gap-space-md"
+              >
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] flex items-center gap-space-xs"
+                >
+                  <span class="w-6 h-[2px] bg-secondary inline-block"></span>
+                  Traditional Gaucho Tableside Grill Heritage
+                </span>
+                <h1
+                  class="font-display-hero text-display-hero text-on-surface leading-tight"
+                >
+                  The Art of
+                  <span class="italic font-normal text-primary"
+                    >Gaucho Fire</span
+                  >
+                </h1>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant max-w-xl"
+                >
+                  Hollywood, Florida's premier steakhouse dining experience
+                  featuring more than 14 exquisite fire-roasted cuts of meat
+                  carved tableside, an unlimited buffet, and authentic Cuban
+                  hospitality.
+                </p>
+                <!-- CTAs -->
+                <div
+                  class="flex flex-wrap items-center gap-space-md pt-space-xs"
+                >
+                  <a
+                    class="inline-flex items-center justify-center h-12 px-space-xl rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md shadow-[0_0_24px_-4px_rgba(230,110,42,0.45)] hover:bg-surface-container/90 transition-all"
+                    href="#menu"
+                  >
+                    <span>View Menu</span>
+                    <span class="material-symbols-outlined text-[18px] ml-2"
+                      >menu_book</span
+                    >
+                  </a>
+                </div>
+                <!-- Highlight Micro-Stats -->
+                <div
+                  class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-xs border-t-0"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md text-headline-md text-primary font-semibold"
+                      >14+</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Fire Cuts</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-md text-headline-md text-secondary font-semibold"
+                      >45+</span
+                    >
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Market Items</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Banquet Hero Image Column -->
+              <div class="lg:col-span-6 relative">
+                <div
+                  class="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container"
+                >
+                  <img
+                    alt="Lavish Brazilian Tableside Grill Banquet Table"
+                    class="w-full h-[420px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                    src="./img/Pulpo2.jpeg"
+                  />
+                  <!-- Warm Ember Gradient Overlay -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"
+                  ></div>
+                  <div
+                    class="absolute bottom-space-md left-space-md right-space-md p-space-md rounded-DEFAULT bg-surface-container/90 backdrop-blur-md flex items-center justify-between shadow-xl"
+                  >
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps uppercase text-secondary"
+                      >
+                        The Full Tableside Grill Experience
+                      </p>
+                      <p
+                        class="font-headline-sm text-headline-sm text-on-surface"
+                      >
+                        Continuous Tableside Service
+                      </p>
+                    </div>
+                    <span
+                      class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps uppercase"
+                      >All-Inclusive</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Quick Reservation Bar (Floating Level 2 Bar) -->
+            <div
+              class="mt-space-xl p-space-md lg:p-space-lg rounded-xl bg-surface-container-high shadow-[0_20px_40px_-10px_rgba(0,0,0,0.75)]"
+              id="quick-reserve"
+            >
+              <form
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md items-end"
+                onsubmit="
+                  event.preventDefault();
+                  window.open(
+                    'https://wa.me/13057241434?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Rio%20Grande%20Churrascaria.',
+                    '_blank',
+                  );
+                "
+              ></form>
+            </div>
+          </div>
+        </section>
+        <!-- Highlights & Key Accolades Strip -->
+        <section class="w-full bg-surface-container-low py-space-xl">
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop"
+          >
+            <div
+              class="scroll-blend grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center md:text-left"
+            >
+              <div class="flex items-center gap-space-md">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >outdoor_grill</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface leading-none"
+                    >14+ Cuts</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >Carved Continuous Tableside</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center gap-space-md">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-primary shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-[24px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >verified</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface leading-none"
+                    >4.9 Star Rating</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >2,230+ Google Foodies</span
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-space-md">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-secondary shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >nest_clock_farsight_analog</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface leading-none"
+                    >Daily 11 PM</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                    >1655 S 21st Ave, Hollywood</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Real Menu Section -->
+        <section
+          class="w-full py-space-3xl lg:py-space-4xl bg-background relative scroll-mt-24"
+          id="menu"
+        >
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              class="scroll-blend flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg"
+            >
+              <div class="max-w-3xl flex flex-col gap-space-xs">
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest flex items-center gap-space-xs"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] text-primary"
+                    >menu_book</span
+                  >
+                  Tableside Grill Menu
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                  Lunch, Dinner &amp; Weekend Brunch
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Choose your Brazilian tableside grill experience with
+                  continuous tableside cuts, fresh salad area, and warm
+                  steakhouse sides.
+                </p>
+              </div>
+              <a
+                class="h-12 px-space-lg rounded-DEFAULT bg-primary-container text-on-primary font-label-md text-label-md inline-flex items-center justify-center gap-space-xs shadow-[0_0_20px_-4px_rgba(230,110,42,0.5)] hover:bg-secondary hover:text-on-secondary transition-all"
+                href="tel:7542605809"
+              >
+                <span class="material-symbols-outlined text-[18px]">call</span>
+                Ask About Today's Menu
+              </a>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+              <article
+                class="scroll-blend hover-card relative min-h-[420px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/Pulpo1.jpeg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10"
+                ></div>
+                <div
+                  class="relative p-space-lg flex flex-col gap-space-md h-full justify-end"
+                >
+                  <div class="flex items-start justify-between gap-space-md">
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                      >
+                        Monday - Friday
+                      </p>
+                      <h3
+                        class="font-headline-md text-headline-md text-on-surface"
+                      >
+                        Lunch
+                      </h3>
+                    </div>
+                    <div
+                      class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-headline-sm text-[22px] shadow-md"
+                    >
+                      $29.99
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px]"
+                      >schedule</span
+                    >
+                    11 am - 4 pm
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface">
+                    Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with
+                    Vegetables, Garlic Top Sirloin Cap, Pork Loin, Lamb Leg,
+                    Brisket, Chicken Thighs, Chicken with Bacon, Grilled Cheese,
+                    Shrimp, Octopus, Chorizo, Chicken Hearts + Salad Area.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[420px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/Lam.jpeg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10"
+                ></div>
+                <div
+                  class="relative p-space-lg flex flex-col gap-space-md h-full justify-end"
+                >
+                  <div class="flex items-start justify-between gap-space-md">
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                      >
+                        Monday - Sunday
+                      </p>
+                      <h3
+                        class="font-headline-md text-headline-md text-on-surface"
+                      >
+                        Dinner
+                      </h3>
+                    </div>
+                    <div
+                      class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-headline-sm text-[22px] shadow-md"
+                    >
+                      $39.99
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px]"
+                      >schedule</span
+                    >
+                    4 pm - 10 pm
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface">
+                    Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top
+                    Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg,
+                    Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo,
+                    Shrimp, Fillet, Brisket, Octopus, Chicken Thighs, Chicken
+                    Hearts + Salad Area.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[420px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-secondary/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/Pinchos.jpeg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10"
+                ></div>
+                <div
+                  class="relative p-space-lg flex flex-col gap-space-md h-full justify-end"
+                >
+                  <div class="flex items-start justify-between gap-space-md">
+                    <div>
+                      <p
+                        class="font-label-caps text-label-caps text-secondary uppercase"
+                      >
+                        Saturday &amp; Sunday
+                      </p>
+                      <h3
+                        class="font-headline-md text-headline-md text-on-surface"
+                      >
+                        Brunch
+                      </h3>
+                    </div>
+                    <div
+                      class="px-space-md py-space-xs rounded-full bg-secondary text-on-secondary font-headline-sm text-[22px] shadow-md"
+                    >
+                      $39.99
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[18px]"
+                      >schedule</span
+                    >
+                    11 am - 4 pm
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface">
+                    Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top
+                    Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg,
+                    Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo,
+                    Shrimp, Fillet, Octopus, Chicken Thighs, Chicken Hearts +
+                    Salad Area.
+                  </p>
+                  <div
+                    class="mt-auto rounded-DEFAULT bg-secondary/10 text-secondary px-space-md py-space-sm font-label-md text-label-md inline-flex items-center gap-space-xs w-fit"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >local_bar</span
+                    >
+                    Includes Welcome Mimosa
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div
+              class="rounded-xl bg-surface-container-low p-space-lg border border-outline-variant/40 flex flex-col md:flex-row md:items-center justify-between gap-space-md"
+            >
+              <div>
+                <p
+                  class="font-label-caps text-label-caps text-secondary uppercase"
+                >
+                  Included With Tableside Grill
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Salad Area is included with each lunch, dinner, and brunch
+                  experience. Availability and pricing may change on holidays.
+                </p>
+              </div>
+              <a
+                class="h-11 px-space-lg rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center justify-center hover:bg-surface-bright transition-colors"
+                href="https://wa.me/13057241434?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Rio%20Grande%20Churrascaria."
+                rel="noopener"
+                target="_blank"
+              >
+                Reserve Your Table
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- Drinks Section -->
+        <section
+          class="w-full py-space-3xl lg:py-space-4xl bg-surface-container-low relative scroll-mt-24"
+          id="drinks"
+        >
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              class="scroll-blend flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg"
+            >
+              <div class="max-w-3xl flex flex-col gap-space-xs">
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest flex items-center gap-space-xs"
+                >
+                  <span
+                    class="material-symbols-outlined text-[18px] text-primary"
+                    >local_bar</span
+                  >
+                  Bar Menu
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                  Signature Drinks &amp; Classic Cocktails
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Explore house cocktails, Brazilian-inspired classics, soft
+                  drinks, lemonades, beer, and premium water.
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >nightlife</span
+                >
+                <span>Flavors +$1.99 where noted</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+              <article
+                class="scroll-blend hover-card rounded-xl bg-surface-container p-space-lg shadow-xl ring-1 ring-outline-variant/40 flex flex-col bg-cover bg-center gap-space-md"
+                style="background-image: url(&quot;./img/Freddy1.jpeg&quot;)"
+              >
+                <div class="flex items-center justify-between gap-space-md">
+                  <div>
+                    <p
+                      class="font-label-caps text-label-caps text-secondary uppercase"
+                    >
+                      House Favorites
+                    </p>
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface"
+                    >
+                      Signature Drinks
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary text-[32px]"
+                    >local_bar</span
+                  >
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Sun Kiss</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Bay Charm</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Green Saint</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >New Wave Martini</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Rio Samba</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-high px-space-md py-space-sm flex items-center justify-between gap-space-sm ring-1 ring-secondary/30"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Rio Rose</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-secondary"
+                      >$17.99</span
+                    >
+                  </div>
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card rounded-xl bg-surface-container p-space-lg shadow-xl ring-1 ring-outline-variant/40 flex bg-cover bg-center flex-col gap-space-md"
+                style="background-image: url(&quot;./img/Freddy2.jpeg&quot;)"
+              >
+                <div class="flex items-center justify-between gap-space-md">
+                  <div>
+                    <p
+                      class="font-label-caps text-label-caps text-secondary uppercase"
+                    >
+                      Classics
+                    </p>
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface"
+                    >
+                      Cocktails
+                    </h3>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-primary text-[32px]"
+                    >liquor</span
+                  >
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                  >
+                    <div class="flex items-center justify-between gap-space-sm">
+                      <span class="font-label-md text-label-md text-on-surface"
+                        >Caipirinha</span
+                      >
+                      <span class="font-headline-sm text-[18px] text-primary"
+                        >$13.99</span
+                      >
+                    </div>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">
+                      Mango, Strawberry, Passion Fruit, Coconut
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                  >
+                    <div class="flex items-center justify-between gap-space-sm">
+                      <span class="font-label-md text-label-md text-on-surface"
+                        >Mojito</span
+                      >
+                      <span class="font-headline-sm text-[18px] text-primary"
+                        >$15.99</span
+                      >
+                    </div>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">
+                      Mango, Strawberry, Coconut, Spanish Lime (Lychee)
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                  >
+                    <div class="flex items-center justify-between gap-space-sm">
+                      <span class="font-label-md text-label-md text-on-surface"
+                        >Daiquiri</span
+                      >
+                      <span class="font-headline-sm text-[18px] text-primary"
+                        >$15.99</span
+                      >
+                    </div>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">
+                      Mango, Strawberry, Coconut, Rebel (Mint)
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                  >
+                    <div class="flex items-center justify-between gap-space-sm">
+                      <span class="font-label-md text-label-md text-on-surface"
+                        >Margarita</span
+                      >
+                      <span class="font-headline-sm text-[18px] text-primary"
+                        >$15.99</span
+                      >
+                    </div>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">
+                      Regular, Strawberry, Guava
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Gin Tonic</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Long Island Ice Tea</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Negroni</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Moscow Mule</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Lemon Drop</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Dirty Martini</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$16.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Classy Gossip</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Rico Rasberry</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Old Fashioned</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Pineapple Colada</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm flex items-center justify-between gap-space-sm"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Sangria Glass</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-primary"
+                      >$15.99</span
+                    >
+                  </div>
+                  <div
+                    class="rounded-DEFAULT bg-surface-container-high px-space-md py-space-sm flex items-center justify-between gap-space-sm ring-1 ring-secondary/30"
+                  >
+                    <span class="font-label-md text-label-md text-on-surface"
+                      >Sangria Jar</span
+                    >
+                    <span class="font-headline-sm text-[18px] text-secondary"
+                      >$37.99</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <article
+              class="scroll-blend hover-card rounded-xl bg-surface-container p-space-lg shadow-xl ring-1 ring-outline-variant/40 flex flex-col gap-space-md"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between gap-space-md"
+              >
+                <div>
+                  <p
+                    class="font-label-caps text-label-caps text-secondary uppercase"
+                  >
+                    Refreshments
+                  </p>
+                  <h3 class="font-headline-md text-headline-md text-on-surface">
+                    Soft Drinks &amp; Lemonades
+                  </h3>
+                </div>
+                <span
+                  class="font-label-caps text-label-caps text-outline uppercase"
+                >
+                  Lemonade flavors +$1.99 each
+                </span>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-space-sm"
+              >
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Coke
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$3.50</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Coke Zero
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$3.50</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Sprite
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$3.50</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Guarana Soda
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$4.50</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Beer
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$6.99</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-low px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Premium Water
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$6.50</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container-high px-space-md py-space-sm ring-1 ring-secondary/30"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Lemonades
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-secondary">
+                    $5.99
+                  </p>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">
+                    Strawberry, Mango, Coconut, Passion Fruit and more. Ask your
+                    server for today's flavors.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Section 3: Desserts & Coffee Menu -->
+        <section
+          class="w-full py-space-3xl lg:py-space-4xl bg-surface relative scroll-mt-24"
+          id="desserts"
+        >
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl"
+          >
+            <!-- Section Title -->
+            <div
+              class="scroll-blend flex flex-col md:flex-row items-start md:items-end justify-between gap-space-md"
+            >
+              <div class="flex flex-col gap-space-xs max-w-xl">
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest flex items-center gap-space-xs"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-primary"
+                    >cake</span
+                  >
+                  Sweet Cowboy Finale
+                </span>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                  Desserts &amp; Coffee
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Finish your steakhouse experience with classic desserts, ice
+                  cream pairings, espresso service, and Brazilian coffee
+                  favorites.
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >local_cafe</span
+                >
+                <span>Desserts $11.99</span>
+              </div>
+            </div>
+            <!-- Dessert Menu Cards -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg"
+            >
+              <article
+                class="scroll-blend hover-card relative min-h-[320px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/pistacho.jpg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"
+                ></div>
+                <div class="relative p-space-lg flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >cake</span
+                  >
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                    Pistachio Cake
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Pistachio dessert served as a sweet finish after rodizio.
+                  </p>
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-semibold"
+                    >$11.99</span
+                  >
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[320px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/almendra.jpeg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"
+                ></div>
+                <div class="relative p-space-lg flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >bakery_dining</span
+                  >
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                    Almond Cake
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Almond tart served with a classic steakhouse dessert style.
+                  </p>
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-semibold"
+                    >$11.99</span
+                  >
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[320px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/flan.jpg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"
+                ></div>
+                <div class="relative p-space-lg flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >icecream</span
+                  >
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                    Flan with Ice Cream
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Flan served with 2 ice cream scoops, vanilla or chocolate.
+                  </p>
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-semibold"
+                    >$11.99</span
+                  >
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[320px] rounded-xl overflow-hidden shadow-xl ring-1 ring-outline-variant/40 bg-cover bg-center flex items-end"
+                style="
+                  background-image: url(&quot;./img/pastel de chocolate.jpeg&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"
+                ></div>
+                <div class="relative p-space-lg flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >restaurant</span
+                  >
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                    Chocolate Cake
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Chocolate cake served with 2 ice cream scoops, vanilla or
+                    chocolate.
+                  </p>
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-semibold"
+                    >$11.99</span
+                  >
+                </div>
+              </article>
+              <article
+                class="scroll-blend hover-card relative min-h-[320px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-secondary/40 bg-cover bg-center flex items-end"
+                style="background-image: url(&quot;./img/catalana.jpg&quot;)"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10"
+                ></div>
+                <div class="relative p-space-lg flex flex-col gap-space-xs">
+                  <span
+                    class="material-symbols-outlined text-secondary text-[28px]"
+                    >local_fire_department</span
+                  >
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                    Catalan Cream
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Creme Brulee with a caramelized finish.
+                  </p>
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-semibold"
+                    >$11.99</span
+                  >
+                </div>
+              </article>
+            </div>
+            <div
+              class="rounded-xl bg-surface-container-low p-space-lg border border-outline-variant/40 flex flex-col lg:flex-row gap-space-lg lg:items-center lg:justify-between"
+            >
+              <div class="flex flex-col gap-space-xs">
+                <span
+                  class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                >
+                  Coffee
+                </span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                  Espresso Service
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Pair dessert with hot coffee service after dinner.
+                </p>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm w-full lg:w-auto"
+              >
+                <div
+                  class="rounded-DEFAULT bg-surface-container px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Espresso
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$3.25</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Cuban Espresso with Milk
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$3.25</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Bombon Coffee
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$5.25</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Cappuccino
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$4.75</p>
+                </div>
+                <div
+                  class="rounded-DEFAULT bg-surface-container px-space-md py-space-sm"
+                >
+                  <p class="font-label-md text-label-md text-on-surface">
+                    Spiked Espresso
+                  </p>
+                  <p class="font-headline-sm text-[18px] text-primary">$7.25</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section 4: Testimonials & Google Praise -->
+        <section class="w-full py-space-3xl bg-surface-container-low relative">
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-col gap-space-2xl"
+          >
+            <!-- Header Banner -->
+            <div
+              class="scroll-blend p-space-xl rounded-xl bg-surface-container flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-xl"
+            >
+              <div class="flex items-center gap-space-md">
+                <div
+                  class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-md"
+                >
+                  <span
+                    class="material-symbols-outlined text-[36px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >reviews</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-1 text-secondary">
+                    <span
+                      class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="font-headline-sm text-headline-sm text-on-surface ml-2"
+                      >4.9 / 5.0</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-0.5"
+                  >
+                    Based on 2,232+ verified diners on Google Local Reviews
+                  </p>
+                </div>
+              </div>
+              <a
+                class="px-space-lg py-space-sm rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors flex items-center gap-2"
+                href="https://maps.google.com"
+                rel="noopener"
+                target="_blank"
+              >
+                <span>Read All Google Reviews</span>
+                <span class="material-symbols-outlined text-[16px]"
+                  >open_in_new</span
+                >
+              </a>
+            </div>
+            <!-- Testimonial Cards Mosaic -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+              <div
+                class="scroll-blend hover-card p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-lg"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-1 text-secondary">
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "Without question the best top sirloin cap in South Florida.
+                    The meat never stops coming unless you turn your coaster
+                    red. The salad bar alone is worth the trip, and the outdoor
+                    patio feels like a private Brazilian oasis!"
+                  </p>
+                </div>
+                <div
+                  class="flex items-center gap-space-sm pt-space-xs border-t-0"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold"
+                  >
+                    MR
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-semibold"
+                      >Marcus R.</span
+                    >
+                    <span class="font-body-sm text-[12px] text-outline"
+                      >Hollywood Local | 3 weeks ago</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="scroll-blend hover-card p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-lg"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-1 text-secondary">
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "We celebrated our anniversary here. The gauchos carved the
+                    ribeye and lamb chops with absolute mastery right at our
+                    table. The traditional lime cocktails made with Brazilian
+                    sugarcane liquor are top notch!"
+                  </p>
+                </div>
+                <div
+                  class="flex items-center gap-space-sm pt-space-xs border-t-0"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold"
+                  >
+                    SL
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-semibold"
+                      >Sofia &amp; Lucas</span
+                    >
+                    <span class="font-body-sm text-[12px] text-outline"
+                      >Fort Lauderdale | 1 month ago</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="scroll-blend hover-card p-space-lg rounded-xl bg-surface-container flex flex-col justify-between gap-space-md shadow-lg"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center gap-1 text-secondary">
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[18px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    "Clean, authentic, high luxury, and incredible value at
+                    around $45 for endless high-end steak. The warm cheese bread
+                    and caramelized bananas had my kids asking to come back
+                    tomorrow."
+                  </p>
+                </div>
+                <div
+                  class="flex items-center gap-space-sm pt-space-xs border-t-0"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-surface-bright text-on-surface flex items-center justify-center font-bold"
+                  >
+                    DT
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-semibold"
+                      >David T.</span
+                    >
+                    <span class="font-body-sm text-[12px] text-outline"
+                      >Miami Beach | 2 months ago</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section 5: Visit Us in Hollywood, FL -->
+        <section
+          class="w-full py-space-3xl lg:py-space-4xl bg-surface relative"
+          id="location-and-hours"
+        >
+          <div
+            class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+              <!-- Location Info Panel -->
+              <div
+                class="scroll-blend lg:col-span-6 flex flex-col gap-space-lg"
+              >
+                <div class="flex flex-col gap-space-xs">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest flex items-center gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >location_on</span
+                    >
+                    Destination Hollywood
+                  </span>
+                  <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                    Visit Us in Hollywood, FL
+                  </h2>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Centrally situated off Pembroke Road and US-1, minutes from
+                    Hollywood Beach and downtown nightlife. Enjoy our spacious
+                    indoor dining hall or the romantic palm-shaded outdoor
+                    terrace.
+                  </p>
+                </div>
+                <!-- Key Details Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div
+                    class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[24px]"
+                      >map</span
+                    >
+                    <p
+                      class="font-label-md text-label-md text-on-surface font-bold"
+                    >
+                      Address
+                    </p>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      1655 S 21st Ave<br />
+                      Hollywood, FL 33020
+                    </p>
+                    <a
+                      class="font-label-caps text-label-caps uppercase text-secondary mt-1 hover:underline inline-flex items-center gap-1"
+                      href="https://maps.google.com/?q=1655+S+21st+Ave,+Hollywood,+FL+33020"
+                      rel="noopener"
+                      target="_blank"
+                    >
+                      Get Directions
+                      <span class="material-symbols-outlined text-[14px]"
+                        >arrow_forward</span
+                      >
+                    </a>
+                  </div>
+                  <div
+                    class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[24px]"
+                      >schedule</span
+                    >
+                    <p
+                      class="font-label-md text-label-md text-on-surface font-bold"
+                    >
+                      Continuous Hours
+                    </p>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Monday - Thursday &amp; Sunday: 11:30 AM - 10 PM<br />
+                      Friday - Saturday: 11:30 AM - 11 PM
+                    </p>
+                  </div>
+                  <div
+                    class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-tertiary text-[24px]"
+                      >call</span
+                    >
+                    <p
+                      class="font-label-md text-label-md text-on-surface font-bold"
+                    >
+                      Direct Phone
+                    </p>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      Reservations &amp; Private Dining:
+                    </p>
+                    <a
+                      class="font-headline-sm text-[18px] text-on-surface font-bold hover:text-secondary transition-colors"
+                      href="tel:7542605809"
+                    >
+                      (754) 260-5809
+                    </a>
+                  </div>
+                </div>
+                <!-- Direct CTA -->
+                <div class="flex items-center gap-space-md">
+                  <a
+                    class="h-12 px-space-xl rounded-DEFAULT bg-primary-container text-on-primary font-label-md text-label-md inline-flex items-center justify-center gap-space-xs shadow-[0_0_20px_-4px_rgba(230,110,42,0.5)] hover:bg-secondary hover:text-on-secondary transition-all"
+                    href="tel:7542605809"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >call</span
+                    >
+                    <span>Call Concierge</span>
+                  </a>
+                  <a
+                    class="h-12 px-space-lg rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md inline-flex items-center justify-center hover:bg-surface-bright transition-colors"
+                    href="https://wa.me/13057241434?text=Hello%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Rio%20Grande%20Churrascaria."
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    Online Booking
+                  </a>
+                </div>
+              </div>
+              <!-- Visual Map Integration -->
+              <div class="lg:col-span-6 flex flex-col">
+                <div
+                  class="w-full h-80 lg:h-[460px] rounded-lg shadow-2xl overflow-hidden bg-surface-container relative"
+                  data-location="1655 S 21st Ave, Hollywood, FL 33020"
+                >
+                  <iframe
+                    allowfullscreen=""
+                    class="w-full h-full"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.678492368889!2d-80.15059932480855!3d25.996999177204767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ab3b532156ff%3A0x846ca0278ebdeb7a!2sRio%20Grande%20Churrascaria%20Hollywood!5e1!3m2!1sen!2sus!4v1788990059798!5m2!1sen!2sus"
+                    style="border: 0"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script>
+          const whatsappMessages = {
+            en: "Hello, I would like to reserve a table at Rio Grande Steakhouse.",
+            es: "Hola, me gustaria reservar una mesa en Rio Grande Steakhouse.",
+          };
+
+          const translations = {
+            es: {
+              "Churrascaria Hollywood": "Steakhouse Hollywood",
+              "Steakhouse Hollywood": "Steakhouse Hollywood",
+              Menu: "Menu",
+              Drinks: "Bebidas",
+              Desserts: "Postres",
+              "Location & Hours": "Ubicacion y Horarios",
+              "Reserve a Table": "Reservar una Mesa",
+              "4.9 Star Rating, 2,232+ Verified Google Reviews":
+                "Calificacion de 4.9 estrellas, 2,232+ resenas verificadas de Google",
+              "Hollywood, FL": "Hollywood, FL",
+              "$30-$50 per person": "$30-$50 por persona",
+              "Open Daily to 11 PM": "Abierto todos los dias hasta las 11 PM",
+              "Traditional Cowboy Tableside Grill Heritage":
+                "Tradicion de parrilla al estilo vaquero servida en la mesa",
+              "The Art of": "El Arte del",
+              "Cowboy Fire": "Fuego Vaquero",
+              "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic Cuban hospitality.":
+                "La experiencia de steakhouse mas destacada de Hollywood, Florida, con mas de 14 exquisitos cortes asados al fuego y servidos en la mesa, buffet ilimitado y autentica hospitalidad cubana.",
+              "View Menu": "Ver Menu",
+              "14+": "14+",
+              "Fire Cuts": "Cortes al Fuego",
+              "45+": "45+",
+              "Market Items": "Opciones del Buffet",
+              "The Full Tableside Grill Experience":
+                "La Experiencia Completa de Parrilla en la Mesa",
+              "Continuous Tableside Service": "Servicio Continuo en la Mesa",
+              "All-Inclusive": "Todo Incluido",
+              "14+ Cuts": "14+ Cortes",
+              "Carved Continuous Tableside":
+                "Cortados continuamente en la mesa",
+              "4.9 Star Rating": "Calificacion de 4.9 estrellas",
+              "2,230+ Google Foodies": "2,230+ amantes de la comida en Google",
+              "Daily 11 PM": "Todos los dias hasta las 11 PM",
+              "1655 S 21st Ave, Hollywood": "1655 S 21st Ave, Hollywood",
+              "Tableside Grill Menu": "Menu de Parrilla en la Mesa",
+              "Lunch, Dinner & Weekend Brunch":
+                "Almuerzo, Cena y Brunch de Fin de Semana",
+              "Choose your Brazilian tableside grill experience with continuous tableside cuts, fresh salad area, and warm steakhouse sides.":
+                "Elige tu experiencia brasilena de parrilla servida en la mesa con cortes continuos, area de ensaladas frescas y acompanamientos calientes de steakhouse.",
+              "Ask About Today's Menu": "Pregunta por el Menu de Hoy",
+              "Monday - Friday": "Lunes - Viernes",
+              Lunch: "Almuerzo",
+              "11 am - 4 pm": "11 AM - 4 PM",
+              "Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Garlic Top Sirloin Cap, Pork Loin, Lamb Leg, Brisket, Chicken Thighs, Chicken with Bacon, Grilled Cheese, Shrimp, Octopus, Chorizo, Chicken Hearts + Salad Area.":
+                "Picaña, churrasco, picaña con vegetales, picaña con ajo, lomo de cerdo, pierna de cordero, brisket, muslos de pollo, pollo con tocino, queso a la parrilla, camarones, pulpo, chorizo, corazones de pollo + area de ensaladas.",
+              "Monday - Sunday": "Lunes - Domingo",
+              Dinner: "Cena",
+              "4 pm - 10 pm": "4 PM - 10 PM",
+              "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Brisket, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
+                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, brisket, pulpo, muslos de pollo, corazones de pollo + area de ensaladas.",
+              "Saturday & Sunday": "Sabado y Domingo",
+              Brunch: "Brunch",
+              "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
+                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, pulpo, muslos de pollo, corazones de pollo + area de ensaladas.",
+              "Includes Welcome Mimosa": "Incluye Mimosa de Bienvenida",
+              "Included With Tableside Grill":
+                "Incluido con la Parrilla en la Mesa",
+              "Salad Area is included with each lunch, dinner, and brunch experience. Availability and pricing may change on holidays.":
+                "El area de ensaladas esta incluida con cada experiencia de almuerzo, cena y brunch. La disponibilidad y los precios pueden cambiar en dias festivos.",
+              "Reserve Your Table": "Reserva Tu Mesa",
+              "Bar Menu": "Menu del Bar",
+              "Signature Drinks & Classic Cocktails":
+                "Bebidas de Autor y Cocteles Clasicos",
+              "Explore house cocktails, Brazilian-inspired classics, soft drinks, lemonades, beer, and premium water.":
+                "Explora cocteles de la casa, clasicos inspirados en Brasil, refrescos, limonadas, cerveza y agua premium.",
+              "Flavors +$1.99 where noted": "Sabores +$1.99 donde se indique",
+              "House Favorites": "Favoritos de la Casa",
+              "Signature Drinks": "Bebidas de Autor",
+              "Sun Kiss": "Beso del Sol",
+              "Bay Charm": "Encanto de Bahia",
+              "Green Saint": "Santo Verde",
+              "New Wave Martini": "Martini Bossa Nova",
+              "Rio Samba": "Samba de Rio",
+              "Rio Rose": "Rosa Carioca",
+              Classics: "Clasicos",
+              Cocktails: "Cocteles",
+              "Mango, Strawberry, Passion Fruit, Coconut":
+                "Mango, Fresa, Maracuya, Coco",
+              "Mango, Strawberry, Coconut, Spanish Lime (Lychee)":
+                "Mango, Fresa, Coco, Mamoncillo (Lychee)",
+              "Mango, Strawberry, Coconut, Rebel (Mint)":
+                "Mango, Fresa, Coco, Rebelde (Menta)",
+              "Regular, Strawberry, Guava": "Regular, Fresa, Guayaba",
+              "Gin Tonic": "Gin Tonic",
+              "Long Island Ice Tea": "Te Helado Long Island",
+              "Lemon Drop": "Limon Dulce",
+              "Dirty Martini": "Martini Seco con Aceituna",
+              "Classy Gossip": "Chismosa y Fina",
+              "Rico Rasberry": "Rico Raspberry",
+              "Old Fashioned": "Old Fashioned",
+              "Pineapple Colada": "Pina Colada",
+              "Sangria Glass": "Copa de Sangria",
+              "Sangria Jar": "Jarra de Sangria",
+              Refreshments: "Refrescos",
+              "Soft Drinks & Lemonades": "Refrescos y Limonadas",
+              "Lemonade flavors +$1.99 each":
+                "Sabores de limonada +$1.99 cada uno",
+              "Coke Zero": "Coke Zero",
+              "Guarana Soda": "Refresco de Guarana",
+              Beer: "Cerveza",
+              "Premium Water": "Agua Premium",
+              Lemonades: "Limonadas",
+              "Strawberry, Mango, Coconut, Passion Fruit and more. Ask your server for today's flavors.":
+                "Fresa, mango, coco, maracuya y mas. Pregunta a tu mesero por los sabores de hoy.",
+              "Sweet Cowboy Finale": "Final Dulce Vaquero",
+              "Desserts & Coffee": "Postres y Cafe",
+              "Finish your steakhouse experience with classic desserts, ice cream pairings, espresso service, and Brazilian coffee favorites.":
+                "Termina tu experiencia de steakhouse con postres clasicos, combinaciones con helado, servicio de espresso y favoritos de cafe brasileno.",
+              "Desserts $11.99": "Postres $11.99",
+              "Pistachio Cake": "Pastel de Pistacho",
+              "Pistachio dessert served as a sweet finish after rodizio.":
+                "Postre de pistacho servido como un final dulce despues de la parrilla.",
+              "Almond Cake": "Pastel de Almendras",
+              "Almond tart served with a classic steakhouse dessert style.":
+                "Tarta de almendras servida con el estilo clasico de postre de steakhouse.",
+              "Flan with Ice Cream": "Flan con Helado",
+              "Flan served with 2 ice cream scoops, vanilla or chocolate.":
+                "Flan servido con 2 bolas de helado, vainilla o chocolate.",
+              "Chocolate Cake": "Pastel de Chocolate",
+              "Chocolate cake served with 2 ice cream scoops, vanilla or chocolate.":
+                "Pastel de chocolate servido con 2 bolas de helado, vainilla o chocolate.",
+              "Catalan Cream": "Crema Catalana",
+              "Creme Brulee with a caramelized finish.":
+                "Crema estilo creme brulee con acabado caramelizado.",
+              Coffee: "Cafe",
+              "Espresso Service": "Servicio de Espresso",
+              "Pair dessert with hot coffee service after dinner.":
+                "Acompana el postre con servicio de cafe caliente despues de la cena.",
+              "Cuban Espresso with Milk": "Cortadito",
+              "Bombon Coffee": "Cafe Bombon",
+              Cappuccino: "Capuchino",
+              "Spiked Espresso": "Carajillo",
+              "4.9 / 5.0": "4.9 / 5.0",
+              "Based on 2,232+ verified diners on Google Local Reviews":
+                "Basado en 2,232+ comensales verificados en resenas locales de Google",
+              "Read All Google Reviews": "Leer Todas las Resenas de Google",
+              '"Without question the best top sirloin cap in South Florida. The meat never stops coming unless you turn your coaster red. The salad bar alone is worth the trip, and the outdoor patio feels like a private Brazilian oasis!"':
+                '"Sin duda, la mejor picaña del sur de Florida. La carne no deja de llegar a menos que voltees tu ficha a rojo. Solo la barra de ensaladas vale el viaje, y el patio exterior se siente como un oasis brasileno privado!"',
+              "Hollywood Local | 3 weeks ago":
+                "Cliente de Hollywood | hace 3 semanas",
+              '"We celebrated our anniversary here. The gauchos carved the ribeye and lamb chops with absolute mastery right at our table. The traditional lime cocktails made with Brazilian sugarcane liquor are top notch!"':
+                '"Celebramos nuestro aniversario aqui. Los parrilleros cortaron el ribeye y las chuletas de cordero con total maestria justo en nuestra mesa. Los cocteles tradicionales de lima con licor brasileno de cana de azucar son excelentes!"',
+              "Fort Lauderdale | 1 month ago": "Fort Lauderdale | hace 1 mes",
+              '"Clean, authentic, high luxury, and incredible value at around $45 for endless high-end steak. The warm cheese bread and caramelized bananas had my kids asking to come back tomorrow."':
+                '"Limpio, autentico, lujoso y con excelente valor por alrededor de $45 por carnes premium ilimitadas. El pan de queso caliente y los platanos caramelizados hicieron que mis hijos quisieran volver manana."',
+              "Miami Beach | 2 months ago": "Miami Beach | hace 2 meses",
+              "Destination Hollywood": "Destino Hollywood",
+              "Visit Us in Hollywood, FL": "Visitanos en Hollywood, FL",
+              "Centrally situated off Pembroke Road and US-1, minutes from Hollywood Beach and downtown nightlife. Enjoy our spacious indoor dining hall or the romantic palm-shaded outdoor terrace.":
+                "Ubicado en una zona centrica cerca de Pembroke Road y US-1, a minutos de Hollywood Beach y la vida nocturna del centro. Disfruta nuestro amplio salon interior o la romantica terraza exterior bajo palmeras.",
+              Address: "Direccion",
+              "1655 S 21st Ave\n                      Hollywood, FL 33020":
+                "1655 S 21st Ave\n                      Hollywood, FL 33020",
+              "Get Directions": "Como Llegar",
+              "Continuous Hours": "Horario Continuo",
+              "Monday - Thursday & Sunday: 11:30 AM - 10 PM":
+                "Lunes - Jueves y Domingo: 11:30 AM - 10 PM",
+              "Friday - Saturday: 11:30 AM - 11 PM":
+                "Viernes - Sabado: 11:30 AM - 11 PM",
+              "Direct Phone": "Telefono Directo",
+              "Reservations & Private Dining:": "Reservas y Comedor Privado:",
+              "Call Concierge": "Llamar al Concierge",
+              "Online Booking": "Reserva en Linea",
+              "An excellent steakhouse featuring continuous service with over 14 cuts of meat brought straight to your table and a wide variety of salads; don't hesitate to enjoy the experience and the great service.":
+                "Un excelente steakhouse con servicio continuo de mas de 14 cortes de carne llevados directamente a tu mesa y una amplia variedad de ensaladas; no dudes en disfrutar la experiencia y el excelente servicio.",
+              "Google Verified Reviews": "Resenas Verificadas de Google",
+              "Continuous Dining": "Comida Continua",
+              "Daily until 11:00 PM": "Todos los dias hasta las 11:00 PM",
+              Gastronomy: "Gastronomia",
+              "Desserts & Port": "Postres y Vino de Oporto",
+              "© 2025 Rio Grande Steakhouse Hollywood. All rights reserved.":
+                "© 2025 Rio Grande Steakhouse Hollywood. Todos los derechos reservados.",
+              "Privacy Policy": "Politica de Privacidad",
+              "Terms of Hospitality": "Terminos de Hospitalidad",
+              Accessibility: "Accesibilidad",
+            },
+          };
+
+          const altTranslations = {
+            es: {
+              "Lavish Brazilian Tableside Grill Banquet Table":
+                "Mesa de banquete brasileno con parrilla servida en la mesa",
+            },
+          };
+
+          let currentLanguage = localStorage.getItem("siteLanguage") || "en";
+          if (!translations[currentLanguage] && currentLanguage !== "en") {
+            currentLanguage = "en";
+          }
+
+          function normalizeText(value) {
+            return value.replace(/\s+/g, " ").trim();
+          }
+
+          function preserveWhitespace(original, translated) {
+            const leading = original.match(/^\s*/)[0];
+            const trailing = original.match(/\s*$/)[0];
+            return `${leading}${translated}${trailing}`;
+          }
+
+          function updateReservationLinks(language) {
+            document
+              .querySelectorAll('a[href*="wa.me/13057241434"]')
+              .forEach((link) => {
+                link.href = `https://wa.me/13057241434?text=${encodeURIComponent(whatsappMessages[language])}`;
+              });
+          }
+
+          function setLanguage(language) {
+            if (!translations[language] && language !== "en") {
+              language = "en";
+            }
+            currentLanguage = language;
+            localStorage.setItem("siteLanguage", language);
+            document.documentElement.lang = language;
+
+            const walker = document.createTreeWalker(
+              document.body,
+              NodeFilter.SHOW_TEXT,
+              {
+                acceptNode(node) {
+                  const parent = node.parentElement;
+                  if (!parent || !normalizeText(node.nodeValue)) {
+                    return NodeFilter.FILTER_REJECT;
+                  }
+                  if (
+                    parent.closest("script, style, .material-symbols-outlined")
+                  ) {
+                    return NodeFilter.FILTER_REJECT;
+                  }
+                  return NodeFilter.FILTER_ACCEPT;
+                },
+              },
+            );
+
+            const textNodes = [];
+            while (walker.nextNode()) {
+              textNodes.push(walker.currentNode);
+            }
+
+            textNodes.forEach((node) => {
+              if (!node.originalText) {
+                node.originalText = node.nodeValue;
+              }
+
+              if (language === "en") {
+                node.nodeValue = node.originalText;
+                return;
+              }
+
+              const key = normalizeText(node.originalText);
+              const translated = translations[language][key];
+              if (translated) {
+                node.nodeValue = preserveWhitespace(
+                  node.originalText,
+                  translated,
+                );
+              }
+            });
+
+            document.querySelectorAll("img[alt]").forEach((image) => {
+              if (!image.dataset.originalAlt) {
+                image.dataset.originalAlt = image.alt;
+              }
+              const key = image.dataset.originalAlt;
+              image.alt =
+                language === "en" ? key : altTranslations[language][key] || key;
+            });
+
+            const toggle = document.getElementById("language-toggle");
+            if (toggle) {
+              toggle.textContent = language === "en" ? "Español" : "English";
+            }
+
+            updateReservationLinks(language);
+          }
+
+          document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("language-toggle");
+            if (toggle) {
+              toggle.addEventListener("click", () => {
+                setLanguage(currentLanguage === "en" ? "es" : "en");
+              });
+            }
+            setLanguage(currentLanguage);
+
+            const sectionIds = [
+              "menu",
+              "drinks",
+              "desserts",
+              "location-and-hours",
+            ];
+            const navLinks = Array.from(
+              document.querySelectorAll("nav a[data-path]"),
+            ).filter((link) => sectionIds.includes(link.dataset.path));
+            const inactiveClass =
+              "font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors";
+            const activeClass =
+              "transition-colors text-secondary border-b border-secondary pb-space-2xs font-label-md";
+
+            function setActiveNav(sectionId) {
+              navLinks.forEach((link) => {
+                const isActive = link.dataset.path === sectionId;
+                link.className = isActive ? activeClass : inactiveClass;
+                if (isActive) {
+                  link.setAttribute("aria-current", "page");
+                } else {
+                  link.removeAttribute("aria-current");
+                }
+              });
+            }
+
+            navLinks.forEach((link) => {
+              link.addEventListener("click", () =>
+                setActiveNav(link.dataset.path),
+              );
+            });
+
+            const initialSection = sectionIds.includes(location.hash.slice(1))
+              ? location.hash.slice(1)
+              : "menu";
+            setActiveNav(initialSection);
+
+            const visibleSections = new Map();
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    visibleSections.set(
+                      entry.target.id,
+                      entry.intersectionRatio,
+                    );
+                  } else {
+                    visibleSections.delete(entry.target.id);
+                  }
+                });
+
+                if (!visibleSections.size) {
+                  return;
+                }
+
+                const [activeSection] = Array.from(
+                  visibleSections.entries(),
+                ).sort((a, b) => b[1] - a[1])[0];
+                setActiveNav(activeSection);
+              },
+              {
+                rootMargin: "-96px 0px -45% 0px",
+                threshold: [0.1, 0.25, 0.5, 0.75],
+              },
+            );
+
+            sectionIds.forEach((sectionId) => {
+              const section = document.getElementById(sectionId);
+              if (section) {
+                observer.observe(section);
+              }
+            });
+
+            const revealItems = document.querySelectorAll(".scroll-blend");
+            if (!("IntersectionObserver" in window)) {
+              revealItems.forEach((item) => item.classList.add("is-visible"));
+              return;
+            }
+
+            const revealObserver = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  entry.target.classList.toggle(
+                    "is-visible",
+                    entry.isIntersecting,
+                  );
+                });
+              },
+              {
+                rootMargin: "0px 0px -18% 0px",
+                threshold: 0.18,
+              },
+            );
+
+            revealItems.forEach((item) => revealObserver.observe(item));
+          });
+        </script>
+        <!-- Bottom Interactive Scripts for Tableside Grill Token -->
+        <script>
+          let isRodizioActive = true;
+          function toggleToken() {
+            const disc = document.getElementById("token-disc");
+            const icon = document.getElementById("token-icon");
+            const status = document.getElementById("token-status");
+            const desc = document.getElementById("token-desc");
+
+            if (isRodizioActive) {
+              // Switch to PAUSE (Red)
+              disc.classList.remove(
+                "bg-primary-container",
+                "shadow-[0_0_20px_rgba(230,110,42,0.6)]",
+              );
+              disc.classList.add("bg-surface-container-highest", "shadow-none");
+              icon.innerText = "pause";
+              status.innerText =
+                currentLanguage === "es"
+                  ? "No, gracias (Pausado)"
+                  : "No, Thank You (Paused)";
+              status.className =
+                "font-label-caps text-label-caps uppercase text-outline font-bold";
+              desc.innerText =
+                currentLanguage === "es"
+                  ? "Tomando una breve pausa de los cortes servidos en la mesa. Haz clic para continuar!"
+                  : "Taking a brief pause from tableside cuts. Click to resume!";
+              isRodizioActive = false;
+            } else {
+              // Switch to ACTIVE (Green / Flame)
+              disc.classList.remove(
+                "bg-surface-container-highest",
+                "shadow-none",
+              );
+              disc.classList.add(
+                "bg-primary-container",
+                "shadow-[0_0_20px_rgba(230,110,42,0.6)]",
+              );
+              icon.innerText = "check";
+              status.innerText =
+                currentLanguage === "es" ? "Si, por favor!" : "Yes, Please!";
+              status.className =
+                "font-label-caps text-label-caps uppercase text-secondary font-bold";
+              desc.innerText =
+                currentLanguage === "es"
+                  ? "Sigan sirviendo cortes premium en la mesa. Haz clic en la ficha para cambiar!"
+                  : "Keep slicing prime cuts tableside. Click disc to flip!";
+              isRodizioActive = true;
+            }
+          }
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest">
+      <div
+        class="max-w-[80rem] mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-3xl pb-space-2xl"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-2xl"
+        >
+          <div class="lg:col-span-4 flex flex-col gap-space-md">
+            <div class="flex items-center gap-space-sm">
+              <img
+                alt="Brand logo. - Primary color: #e06a26
+- Font: playfairDisplay
+- Mode: dark
+- Roundness: rounded-sm
+"
+                class="h-14 w-14 object-cover rounded-full ring-1 ring-secondary/30"
+                src="./img/logo.jpg"
+              /><span class="font-headline-sm text-headline-sm text-on-surface"
+                >Rio Grande</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-sm"
+            >
+              An excellent steakhouse featuring continuous service with over 14
+              cuts of meat brought straight to your table and a wide variety of
+              salads; don't hesitate to enjoy the experience and the great
+              service.
+            </p>
+            <div
+              class="inline-flex items-center gap-space-sm p-space-sm bg-surface-container rounded-xl w-fit"
+            >
+              <div class="flex items-center text-secondary">
+                <span class="material-symbols-outlined text-[20px]">star</span
+                ><span class="material-symbols-outlined text-[20px]">star</span
+                ><span class="material-symbols-outlined text-[20px]">star</span
+                ><span class="material-symbols-outlined text-[20px]">star</span
+                ><span class="material-symbols-outlined text-[20px]">star</span>
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="font-label-md text-label-md text-on-surface font-bold"
+                  >4.9 Star Rating</span
+                ><span
+                  class="font-label-caps text-label-caps text-on-surface-variant"
+                  >Google Verified Reviews</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-3 flex flex-col gap-space-md">
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase"
+              >Location &amp; Hours</span
+            >
+            <div
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <div class="flex items-start gap-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                  >location_on</span
+                ><span>1655 S 21st Ave<br />Hollywood, FL 33020</span>
+              </div>
+              <div class="flex items-start gap-space-xs mt-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5"
+                  >schedule</span
+                >
+                <div>
+                  <p class="text-on-surface font-label-md text-label-md">
+                    Continuous Dining
+                  </p>
+                  <p>Daily until 11:00 PM</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-xs mt-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-[18px] shrink-0"
+                  >call</span
+                ><a
+                  class="text-on-surface hover:text-secondary transition-colors"
+                  href="tel:7542605809"
+                  >(754) 260-5809</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-space-md">
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase"
+              >Gastronomy</span
+            >
+            <ul
+              class="flex flex-col gap-space-sm font-label-md text-label-md text-on-surface-variant"
+            >
+              <li>
+                <a
+                  class="hover:text-on-surface transition-colors"
+                  data-path="menu"
+                  href="#menu"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-surface transition-colors"
+                  data-path="drinks"
+                  href="#drinks"
+                  >Drinks</a
+                >
+              </li>
+
+              <li>
+                <a
+                  class="hover:text-on-surface transition-colors"
+                  data-path="desserts"
+                  href="#desserts"
+                  >Desserts &amp; Port</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-on-surface transition-colors"
+                  data-path="desserts"
+                  href="#location-and-hours"
+                  >Location &amp; Hours</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"
+        >
+          <p>
+            &copy; 2025 Rio Grande Steakhouse Hollywood. All rights reserved.
+          </p>
+          <div
+            class="flex items-center gap-space-lg font-label-caps text-label-caps"
+          >
+            <a class="hover:text-on-surface transition-colors" href="#"
+              >Privacy Policy</a
+            ><a class="hover:text-on-surface transition-colors" href="#"
+              >Terms of Hospitality</a
+            ><a class="hover:text-on-surface transition-colors" href="#"
+              >Accessibility</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
