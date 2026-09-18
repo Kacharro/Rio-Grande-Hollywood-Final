@@ -343,13 +343,32 @@
             rel="noopener"
             target="_blank"
             >Reserve a Table</a
-          ><button
-            class="inline-flex items-center justify-center h-11 px-space-md rounded-DEFAULT bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-colors"
-            id="language-toggle"
-            type="button"
+          ><div
+            class="inline-flex h-11 overflow-hidden rounded-DEFAULT bg-surface-container-high p-1 shadow-sm"
+            aria-label="Language selector"
           >
-            Español
-          </button>
+            <button
+              class="inline-flex items-center justify-center px-space-sm rounded-DEFAULT font-label-md text-label-md uppercase transition-colors"
+              data-language-button="en"
+              type="button"
+            >
+              EN
+            </button>
+            <button
+              class="inline-flex items-center justify-center px-space-sm rounded-DEFAULT font-label-md text-label-md uppercase transition-colors"
+              data-language-button="es"
+              type="button"
+            >
+              ES
+            </button>
+            <button
+              class="inline-flex items-center justify-center px-space-sm rounded-DEFAULT font-label-md text-label-md uppercase transition-colors"
+              data-language-button="pt"
+              type="button"
+            >
+              PT
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -1863,6 +1882,7 @@
           const whatsappMessages = {
             en: "Hello, I would like to reserve a table at Rio Grande Steakhouse.",
             es: "Hola, me gustaria reservar una mesa en Rio Grande Steakhouse.",
+            pt: "Ola, gostaria de reservar uma mesa no Rio Grande Steakhouse.",
           };
 
           const translations = {
@@ -1881,6 +1901,8 @@
               "Open Daily to 11 PM": "Abierto todos los dias hasta las 11 PM",
               "Traditional Cowboy Tableside Grill Heritage":
                 "Tradicion de parrilla al estilo vaquero servida en la mesa",
+              "Traditional Gaucho Tableside Grill Heritage":
+                "Tradicion gaucha de parrilla servida en la mesa",
               "All you can eat": "Todo lo que puedas comer",
               "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic Cuban hospitality.":
                 "La experiencia de steakhouse mas destacada de Hollywood, Florida, con mas de 14 exquisitos cortes asados al fuego y servidos en la mesa, buffet ilimitado y autentica hospitalidad cubana.",
@@ -1909,6 +1931,7 @@
               "Monday - Friday": "Lunes - Viernes",
               Lunch: "Almuerzo",
               "11 am - 4 pm": "11 AM - 4 PM",
+              "11:30 am - 4:00 pm": "11:30 AM - 4:00 PM",
               "Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Garlic Top Sirloin Cap, Pork Loin, Lamb Leg, Brisket, Chicken Thighs, Chicken with Bacon, Grilled Cheese, Shrimp, Octopus, Chorizo, Chicken Hearts + Salad Area.":
                 "Picaña, churrasco, picaña con vegetales, picaña con ajo, lomo de cerdo, pierna de cordero, brisket, muslos de pollo, pollo con tocino, queso a la parrilla, camarones, pulpo, chorizo, corazones de pollo + area de ensaladas.",
               "Monday - Sunday": "Lunes - Domingo",
@@ -2042,12 +2065,192 @@
               "Terms of Hospitality": "Terminos de Hospitalidad",
               Accessibility: "Accesibilidad",
             },
+            pt: {
+              "Churrascaria Hollywood": "Steakhouse Hollywood",
+              "Steakhouse Hollywood": "Steakhouse Hollywood",
+              Menu: "Menu",
+              Drinks: "Bebidas",
+              Desserts: "Sobremesas",
+              "Location & Hours": "Localizacao e Horarios",
+              "Reserve a Table": "Reservar uma Mesa",
+              "4.9 Star Rating, 2,232+ Verified Google Reviews":
+                "Avaliacao de 4,9 estrelas, mais de 2.232 avaliacoes verificadas no Google",
+              "Hollywood, FL": "Hollywood, FL",
+              "$30-$50 per person": "$30-$50 por pessoa",
+              "Open Daily to 11 PM": "Aberto todos os dias ate 23h",
+              "Traditional Cowboy Tableside Grill Heritage":
+                "Tradicao gaucha de churrasco servido a mesa",
+              "Traditional Gaucho Tableside Grill Heritage":
+                "Tradicao gaucha de churrasco servido a mesa",
+              "All you can eat": "Rodizio a vontade",
+              "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic Cuban hospitality.":
+                "A principal experiencia de steakhouse em Hollywood, Florida, com mais de 14 cortes selecionados assados na brasa e servidos a mesa, buffet ilimitado e autentica hospitalidade cubana.",
+              "View Menu": "Ver Menu",
+              "14+": "14+",
+              "Fire Cuts": "Cortes na Brasa",
+              "45+": "45+",
+              "Market Items": "Itens do Buffet",
+              "The Full Tableside Grill Experience":
+                "A Experiencia Completa de Churrasco a Mesa",
+              "Continuous Tableside Service": "Servico Continuo a Mesa",
+              "All-Inclusive": "Tudo Incluido",
+              "14+ Cuts": "14+ Cortes",
+              "Carved Continuous Tableside": "Cortes servidos continuamente a mesa",
+              "4.9 Star Rating": "Avaliacao de 4,9 estrelas",
+              "2,230+ Google Foodies": "2.230+ amantes da gastronomia no Google",
+              "Daily 11 PM": "Todos os dias ate 23h",
+              "1655 S 21st Ave, Hollywood": "1655 S 21st Ave, Hollywood",
+              "Tableside Grill Menu": "Menu de Churrasco a Mesa",
+              "Lunch, Dinner & Weekend Brunch":
+                "Almoco, Jantar e Brunch de Fim de Semana",
+              "Choose your Brazilian tableside grill experience with continuous tableside cuts, fresh salad area, and warm steakhouse sides.":
+                "Escolha sua experiencia brasileira de churrasco a mesa com cortes servidos continuamente, area de saladas frescas e acompanhamentos quentes de steakhouse.",
+              "Ask About Today's Menu": "Pergunte Sobre o Menu de Hoje",
+              "Monday - Friday": "Segunda a Sexta",
+              Lunch: "Almoco",
+              "11 am - 4 pm": "11h - 16h",
+              "11:30 am - 4:00 pm": "11h30 - 16h",
+              "Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Garlic Top Sirloin Cap, Pork Loin, Lamb Leg, Brisket, Chicken Thighs, Chicken with Bacon, Grilled Cheese, Shrimp, Octopus, Chorizo, Chicken Hearts + Salad Area.":
+                "Picanha, churrasco, picanha com legumes, picanha ao alho, lombo de porco, pernil de cordeiro, brisket, sobrecoxa de frango, frango com bacon, queijo grelhado, camarao, polvo, chorizo, coracoes de frango + area de saladas.",
+              "Monday - Sunday": "Segunda a Domingo",
+              Dinner: "Jantar",
+              "4 pm - 10 pm": "16h - 22h",
+              "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Brisket, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
+                "Picanha, picanha ao alho, churrasco, picanha com legumes, lombo de porco, ribeye, pernil de cordeiro, costeletas de cordeiro, frango com bacon, queijo grelhado, chorizo, camarao, file, brisket, polvo, sobrecoxas de frango, coracoes de frango + area de saladas.",
+              "Saturday & Sunday": "Sabado e Domingo",
+              Brunch: "Brunch",
+              "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
+                "Picanha, picanha ao alho, churrasco, picanha com legumes, lombo de porco, ribeye, pernil de cordeiro, costeletas de cordeiro, frango com bacon, queijo grelhado, chorizo, camarao, file, polvo, sobrecoxas de frango, coracoes de frango + area de saladas.",
+              "Includes Welcome Mimosa": "Inclui Mimosa de Boas-Vindas",
+              "Included With Tableside Grill": "Incluido no Churrasco a Mesa",
+              "Salad Area is included with each lunch, dinner, and brunch experience. Availability and pricing may change on holidays.":
+                "A area de saladas esta incluida em cada experiencia de almoco, jantar e brunch. Disponibilidade e precos podem mudar em feriados.",
+              "Reserve Your Table": "Reserve Sua Mesa",
+              "Bar Menu": "Menu do Bar",
+              "Signature Drinks & Classic Cocktails":
+                "Drinks Autorais e Coqueteis Classicos",
+              "Explore house cocktails, Brazilian-inspired classics, soft drinks, lemonades, beer, and premium water.":
+                "Explore coqueteis da casa, classicos inspirados no Brasil, refrigerantes, limonadas, cerveja e agua premium.",
+              "Flavors +$1.99 where noted": "Sabores +$1.99 onde indicado",
+              "House Favorites": "Favoritos da Casa",
+              "Signature Drinks": "Drinks Autorais",
+              "Sun Kiss": "Beijo de Sol",
+              "Bay Charm": "Charme da Baia",
+              "Green Saint": "Santo Verde",
+              "New Wave Martini": "Martini Nova Onda",
+              "Rio Samba": "Samba do Rio",
+              "Rio Rose": "Rosa do Rio",
+              Classics: "Classicos",
+              Cocktails: "Coqueteis",
+              "Mango, Strawberry, Passion Fruit, Coconut":
+                "Manga, Morango, Maracuja, Coco",
+              "Mango, Strawberry, Coconut, Spanish Lime (Lychee)":
+                "Manga, Morango, Coco, Lima Espanhola (Lichia)",
+              "Mango, Strawberry, Coconut, Rebel (Mint)":
+                "Manga, Morango, Coco, Rebelde (Hortela)",
+              "Regular, Strawberry, Guava": "Tradicional, Morango, Goiaba",
+              "Gin Tonic": "Gin Tonica",
+              "Long Island Ice Tea": "Long Island Ice Tea",
+              "Lemon Drop": "Lemon Drop",
+              "Dirty Martini": "Dirty Martini",
+              "Classy Gossip": "Fofoca Elegante",
+              "Rico Rasberry": "Rico Raspberry",
+              "Old Fashioned": "Old Fashioned",
+              "Pineapple Colada": "Pina Colada",
+              "Sangria Glass": "Taca de Sangria",
+              "Sangria Jar": "Jarra de Sangria",
+              Refreshments: "Bebidas Refrescantes",
+              "Soft Drinks & Lemonades": "Refrigerantes e Limonadas",
+              "Lemonade flavors +$1.99 each":
+                "Sabores de limonada +$1.99 cada",
+              "Coke Zero": "Coke Zero",
+              "Guarana Soda": "Refrigerante de Guarana",
+              Beer: "Cerveja",
+              "Premium Water": "Agua Premium",
+              Lemonades: "Limonadas",
+              "Strawberry, Mango, Coconut, Passion Fruit and more. Ask your server for today's flavors.":
+                "Morango, manga, coco, maracuja e mais. Pergunte ao seu atendente pelos sabores de hoje.",
+              "Sweet Cowboy Finale": "Final Doce Gaucho",
+              "Desserts & Coffee": "Sobremesas e Cafe",
+              "Finish your steakhouse experience with classic desserts, ice cream pairings, espresso service, and Brazilian coffee favorites.":
+                "Finalize sua experiencia de steakhouse com sobremesas classicas, combinacoes com sorvete, servico de espresso e favoritos de cafe brasileiro.",
+              "Desserts $11.99": "Sobremesas $11.99",
+              "Pistachio Cake": "Bolo de Pistache",
+              "Pistachio dessert served as a sweet finish after rodizio.":
+                "Sobremesa de pistache servida como final doce depois do rodizio.",
+              "Almond Cake": "Bolo de Amendoas",
+              "Almond tart served with a classic steakhouse dessert style.":
+                "Torta de amendoas servida no estilo classico de sobremesa de steakhouse.",
+              "Flan with Ice Cream": "Pudim com Sorvete",
+              "Flan served with 2 ice cream scoops, vanilla or chocolate.":
+                "Pudim servido com 2 bolas de sorvete, baunilha ou chocolate.",
+              "Chocolate Cake": "Bolo de Chocolate",
+              "Chocolate cake served with 2 ice cream scoops, vanilla or chocolate.":
+                "Bolo de chocolate servido com 2 bolas de sorvete, baunilha ou chocolate.",
+              "Catalan Cream": "Creme Catalao",
+              "Creme Brulee with a caramelized finish.":
+                "Creme brulee com acabamento caramelizado.",
+              Coffee: "Cafe",
+              "Espresso Service": "Servico de Espresso",
+              "Pair dessert with hot coffee service after dinner.":
+                "Combine a sobremesa com cafe quente depois do jantar.",
+              "Cuban Espresso with Milk": "Cafe Cubano com Leite",
+              "Bombon Coffee": "Cafe Bombom",
+              Cappuccino: "Cappuccino",
+              "Spiked Espresso": "Espresso com Licor",
+              "4.9 / 5.0": "4,9 / 5,0",
+              "Based on 2,232+ verified diners on Google Local Reviews":
+                "Com base em mais de 2.232 clientes verificados nas avaliacoes locais do Google",
+              "Read All Google Reviews": "Ler Todas as Avaliacoes do Google",
+              '"Without question the best top sirloin cap in South Florida. The meat never stops coming unless you turn your coaster red. The salad bar alone is worth the trip, and the outdoor patio feels like a private Brazilian oasis!"':
+                '"Sem duvida, a melhor picanha do sul da Florida. A carne nao para de chegar a menos que voce vire seu marcador para vermelho. So o buffet de saladas ja vale a visita, e o patio externo parece um oasis brasileiro privativo!"',
+              "Hollywood Local | 3 weeks ago": "Cliente de Hollywood | ha 3 semanas",
+              '"We celebrated our anniversary here. The gauchos carved the ribeye and lamb chops with absolute mastery right at our table. The traditional lime cocktails made with Brazilian sugarcane liquor are top notch!"':
+                '"Celebramos nosso aniversario aqui. Os gauchos cortaram o ribeye e as costeletas de cordeiro com maestria bem na nossa mesa. Os coqueteis tradicionais de lima com cachaca brasileira sao excelentes!"',
+              "Fort Lauderdale | 1 month ago": "Fort Lauderdale | ha 1 mes",
+              '"Clean, authentic, high luxury, and incredible value at around $45 for endless high-end steak. The warm cheese bread and caramelized bananas had my kids asking to come back tomorrow."':
+                '"Limpo, autentico, sofisticado e com excelente custo-beneficio por cerca de $45 para carnes premium sem fim. O pao de queijo quentinho e as bananas caramelizadas fizeram meus filhos pedirem para voltar amanha."',
+              "Miami Beach | 2 months ago": "Miami Beach | ha 2 meses",
+              "Destination Hollywood": "Destino Hollywood",
+              "Visit Us in Hollywood, FL": "Visite-nos em Hollywood, FL",
+              "Centrally situated off Pembroke Road and US-1, minutes from Hollywood Beach and downtown nightlife. Enjoy our spacious indoor dining hall or the romantic palm-shaded outdoor terrace.":
+                "Localizado em area central perto da Pembroke Road e da US-1, a poucos minutos de Hollywood Beach e da vida noturna do centro. Aproveite nosso amplo salao interno ou o romantico terraco externo sob palmeiras.",
+              Address: "Endereco",
+              "1655 S 21st Ave\n                      Hollywood, FL 33020":
+                "1655 S 21st Ave\n                      Hollywood, FL 33020",
+              "Get Directions": "Como Chegar",
+              "Continuous Hours": "Horario Continuo",
+              "Monday - Thursday & Sunday: 11:30 AM - 10 PM":
+                "Segunda a Quinta e Domingo: 11h30 - 22h",
+              "Friday - Saturday: 11:30 AM - 11 PM":
+                "Sexta e Sabado: 11h30 - 23h",
+              "Direct Phone": "Telefone Direto",
+              "Reservations & Private Dining:": "Reservas e Eventos Privados:",
+              "Call Concierge": "Ligar para o Concierge",
+              "Online Booking": "Reserva Online",
+              "An excellent steakhouse featuring continuous service with over 14 cuts of meat brought straight to your table and a wide variety of salads; don't hesitate to enjoy the experience and the great service.":
+                "Uma excelente steakhouse com servico continuo de mais de 14 cortes de carne levados diretamente a sua mesa e uma grande variedade de saladas; nao deixe de aproveitar a experiencia e o otimo atendimento.",
+              "Google Verified Reviews": "Avaliacoes Verificadas do Google",
+              "Continuous Dining": "Servico Continuo",
+              "Daily until 11:00 PM": "Todos os dias ate 23h",
+              Gastronomy: "Gastronomia",
+              "Desserts & Port": "Sobremesas e Vinho do Porto",
+              "© 2025 Rio Grande Steakhouse Hollywood. All rights reserved.":
+                "© 2025 Rio Grande Steakhouse Hollywood. Todos os direitos reservados.",
+              "Privacy Policy": "Politica de Privacidade",
+              "Terms of Hospitality": "Termos de Hospitalidade",
+              Accessibility: "Acessibilidade",
+            },
           };
 
           const altTranslations = {
             es: {
               "Lavish Brazilian Tableside Grill Banquet Table":
                 "Mesa de banquete brasileno con parrilla servida en la mesa",
+            },
+            pt: {
+              "Lavish Brazilian Tableside Grill Banquet Table":
+                "Mesa de banquete brasileira com churrasco servido a mesa",
             },
           };
 
@@ -2070,7 +2273,7 @@
             document
               .querySelectorAll('a[href*="wa.me/13057241434"]')
               .forEach((link) => {
-                link.href = `https://wa.me/13057241434?text=${encodeURIComponent(whatsappMessages[language])}`;
+                link.href = `https://wa.me/13057241434?text=${encodeURIComponent(whatsappMessages[language] || whatsappMessages.en)}`;
               });
           }
 
@@ -2118,12 +2321,9 @@
 
               const key = normalizeText(node.originalText);
               const translated = translations[language][key];
-              if (translated) {
-                node.nodeValue = preserveWhitespace(
-                  node.originalText,
-                  translated,
-                );
-              }
+              node.nodeValue = translated
+                ? preserveWhitespace(node.originalText, translated)
+                : node.originalText;
             });
 
             document.querySelectorAll("img[alt]").forEach((image) => {
@@ -2135,21 +2335,24 @@
                 language === "en" ? key : altTranslations[language][key] || key;
             });
 
-            const toggle = document.getElementById("language-toggle");
-            if (toggle) {
-              toggle.textContent = language === "en" ? "Español" : "English";
-            }
+            document.querySelectorAll("[data-language-button]").forEach((button) => {
+              const isActive = button.dataset.languageButton === language;
+              button.classList.toggle("bg-primary-container", isActive);
+              button.classList.toggle("text-on-primary", isActive);
+              button.classList.toggle("text-on-surface", !isActive);
+              button.classList.toggle("hover:bg-surface-bright", !isActive);
+              button.setAttribute("aria-pressed", String(isActive));
+            });
 
             updateReservationLinks(language);
           }
 
           document.addEventListener("DOMContentLoaded", () => {
-            const toggle = document.getElementById("language-toggle");
-            if (toggle) {
-              toggle.addEventListener("click", () => {
-                setLanguage(currentLanguage === "en" ? "es" : "en");
+            document.querySelectorAll("[data-language-button]").forEach((button) => {
+              button.addEventListener("click", () => {
+                setLanguage(button.dataset.languageButton);
               });
-            }
+            });
             setLanguage(currentLanguage);
 
             const sectionIds = [
@@ -2252,11 +2455,40 @@
         <!-- Bottom Interactive Scripts for Tableside Grill Token -->
         <script>
           let isRodizioActive = true;
+          const tokenTranslations = {
+            en: {
+              pausedStatus: "No, Thank You (Paused)",
+              pausedDesc:
+                "Taking a brief pause from tableside cuts. Click to resume!",
+              activeStatus: "Yes, Please!",
+              activeDesc:
+                "Keep slicing prime cuts tableside. Click disc to flip!",
+            },
+            es: {
+              pausedStatus: "No, gracias (Pausado)",
+              pausedDesc:
+                "Tomando una breve pausa de los cortes servidos en la mesa. Haz clic para continuar!",
+              activeStatus: "Si, por favor!",
+              activeDesc:
+                "Sigan sirviendo cortes premium en la mesa. Haz clic en la ficha para cambiar!",
+            },
+            pt: {
+              pausedStatus: "Nao, obrigado (Pausado)",
+              pausedDesc:
+                "Fazendo uma breve pausa nos cortes servidos a mesa. Clique para continuar!",
+              activeStatus: "Sim, por favor!",
+              activeDesc:
+                "Continuem servindo cortes premium a mesa. Clique no marcador para virar!",
+            },
+          };
+
           function toggleToken() {
             const disc = document.getElementById("token-disc");
             const icon = document.getElementById("token-icon");
             const status = document.getElementById("token-status");
             const desc = document.getElementById("token-desc");
+            const tokenText =
+              tokenTranslations[currentLanguage] || tokenTranslations.en;
 
             if (isRodizioActive) {
               // Switch to PAUSE (Red)
@@ -2266,16 +2498,10 @@
               );
               disc.classList.add("bg-surface-container-highest", "shadow-none");
               icon.innerText = "pause";
-              status.innerText =
-                currentLanguage === "es"
-                  ? "No, gracias (Pausado)"
-                  : "No, Thank You (Paused)";
+              status.innerText = tokenText.pausedStatus;
               status.className =
                 "font-label-caps text-label-caps uppercase text-outline font-bold";
-              desc.innerText =
-                currentLanguage === "es"
-                  ? "Tomando una breve pausa de los cortes servidos en la mesa. Haz clic para continuar!"
-                  : "Taking a brief pause from tableside cuts. Click to resume!";
+              desc.innerText = tokenText.pausedDesc;
               isRodizioActive = false;
             } else {
               // Switch to ACTIVE (Green / Flame)
@@ -2288,14 +2514,10 @@
                 "shadow-[0_0_20px_rgba(230,110,42,0.6)]",
               );
               icon.innerText = "check";
-              status.innerText =
-                currentLanguage === "es" ? "Si, por favor!" : "Yes, Please!";
+              status.innerText = tokenText.activeStatus;
               status.className =
                 "font-label-caps text-label-caps uppercase text-secondary font-bold";
-              desc.innerText =
-                currentLanguage === "es"
-                  ? "Sigan sirviendo cortes premium en la mesa. Haz clic en la ficha para cambiar!"
-                  : "Keep slicing prime cuts tableside. Click disc to flip!";
+              desc.innerText = tokenText.activeDesc;
               isRodizioActive = true;
             }
           }
