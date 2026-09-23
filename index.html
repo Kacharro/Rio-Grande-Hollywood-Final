@@ -343,7 +343,8 @@
             rel="noopener"
             target="_blank"
             >Reserve a Table</a
-          ><div
+          >
+          <div
             class="inline-flex h-11 overflow-hidden rounded-DEFAULT bg-surface-container-high p-1 shadow-sm"
             aria-label="Language selector"
           >
@@ -1933,16 +1934,16 @@
               "11 am - 4 pm": "11 AM - 4 PM",
               "11:30 am - 4:00 pm": "11:30 AM - 4:00 PM",
               "Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Garlic Top Sirloin Cap, Pork Loin, Lamb Leg, Brisket, Chicken Thighs, Chicken with Bacon, Grilled Cheese, Shrimp, Octopus, Chorizo, Chicken Hearts + Salad Area.":
-                "Picaña, churrasco, picaña con vegetales, picaña con ajo, lomo de cerdo, pierna de cordero, brisket, muslos de pollo, pollo con tocino, queso a la parrilla, camarones, pulpo, chorizo, corazones de pollo + area de ensaladas.",
+                "Picaña, churrasco, picaña con vegetales, picaña con ajo, lomo de cerdo, pierna de cordero, brisket, muslos de pollo sin hueso, pollo con tocino, queso a la parrilla, camarones, pulpo, chorizo, corazones de pollo + area de ensaladas.",
               "Monday - Sunday": "Lunes - Domingo",
               Dinner: "Cena",
               "4 pm - 10 pm": "4 PM - 10 PM",
               "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Brisket, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
-                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, brisket, pulpo, muslos de pollo, corazones de pollo + area de ensaladas.",
+                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, brisket, pulpo, muslos de pollo sin hueso, corazones de pollo + area de ensaladas.",
               "Saturday & Sunday": "Sabado y Domingo",
               Brunch: "Brunch",
               "Top Sirloin Cap, Garlic Top Sirloin Cap, Grilled Steak, Top Sirloin Cap with Vegetables, Pork Loin, Ribeye, Lamb Leg, Lamb Chops, Chicken with Bacon, Grilled Cheese, Chorizo, Shrimp, Fillet, Octopus, Chicken Thighs, Chicken Hearts + Salad Area.":
-                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, pulpo, muslos de pollo, corazones de pollo + area de ensaladas.",
+                "Picaña, picaña con ajo, churrasco, picaña con vegetales, lomo de cerdo, ribeye, pierna de cordero, chuletas de cordero, pollo con tocino, queso a la parrilla, chorizo, camarones, filete, pulpo, muslos de pollo sin hueso, corazones de pollo + area de ensaladas.",
               "Includes Welcome Mimosa": "Incluye Mimosa de Bienvenida",
               "Included With Tableside Grill":
                 "Incluido con la Parrilla en la Mesa",
@@ -2095,9 +2096,11 @@
               "Continuous Tableside Service": "Servico Continuo a Mesa",
               "All-Inclusive": "Tudo Incluido",
               "14+ Cuts": "14+ Cortes",
-              "Carved Continuous Tableside": "Cortes servidos continuamente a mesa",
+              "Carved Continuous Tableside":
+                "Cortes servidos continuamente a mesa",
               "4.9 Star Rating": "Avaliacao de 4,9 estrelas",
-              "2,230+ Google Foodies": "2.230+ amantes da gastronomia no Google",
+              "2,230+ Google Foodies":
+                "2.230+ amantes da gastronomia no Google",
               "Daily 11 PM": "Todos os dias ate 23h",
               "1655 S 21st Ave, Hollywood": "1655 S 21st Ave, Hollywood",
               "Tableside Grill Menu": "Menu de Churrasco a Mesa",
@@ -2161,8 +2164,7 @@
               "Sangria Jar": "Jarra de Sangria",
               Refreshments: "Bebidas Refrescantes",
               "Soft Drinks & Lemonades": "Refrigerantes e Limonadas",
-              "Lemonade flavors +$1.99 each":
-                "Sabores de limonada +$1.99 cada",
+              "Lemonade flavors +$1.99 each": "Sabores de limonada +$1.99 cada",
               "Coke Zero": "Coke Zero",
               "Guarana Soda": "Refrigerante de Guarana",
               Beer: "Cerveja",
@@ -2204,7 +2206,8 @@
               "Read All Google Reviews": "Ler Todas as Avaliacoes do Google",
               '"Without question the best top sirloin cap in South Florida. The meat never stops coming unless you turn your coaster red. The salad bar alone is worth the trip, and the outdoor patio feels like a private Brazilian oasis!"':
                 '"Sem duvida, a melhor picanha do sul da Florida. A carne nao para de chegar a menos que voce vire seu marcador para vermelho. So o buffet de saladas ja vale a visita, e o patio externo parece um oasis brasileiro privativo!"',
-              "Hollywood Local | 3 weeks ago": "Cliente de Hollywood | ha 3 semanas",
+              "Hollywood Local | 3 weeks ago":
+                "Cliente de Hollywood | ha 3 semanas",
               '"We celebrated our anniversary here. The gauchos carved the ribeye and lamb chops with absolute mastery right at our table. The traditional lime cocktails made with Brazilian sugarcane liquor are top notch!"':
                 '"Celebramos nosso aniversario aqui. Os gauchos cortaram o ribeye e as costeletas de cordeiro com maestria bem na nossa mesa. Os coqueteis tradicionais de lima com cachaca brasileira sao excelentes!"',
               "Fort Lauderdale | 1 month ago": "Fort Lauderdale | ha 1 mes",
@@ -2335,24 +2338,28 @@
                 language === "en" ? key : altTranslations[language][key] || key;
             });
 
-            document.querySelectorAll("[data-language-button]").forEach((button) => {
-              const isActive = button.dataset.languageButton === language;
-              button.classList.toggle("bg-primary-container", isActive);
-              button.classList.toggle("text-on-primary", isActive);
-              button.classList.toggle("text-on-surface", !isActive);
-              button.classList.toggle("hover:bg-surface-bright", !isActive);
-              button.setAttribute("aria-pressed", String(isActive));
-            });
+            document
+              .querySelectorAll("[data-language-button]")
+              .forEach((button) => {
+                const isActive = button.dataset.languageButton === language;
+                button.classList.toggle("bg-primary-container", isActive);
+                button.classList.toggle("text-on-primary", isActive);
+                button.classList.toggle("text-on-surface", !isActive);
+                button.classList.toggle("hover:bg-surface-bright", !isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+              });
 
             updateReservationLinks(language);
           }
 
           document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll("[data-language-button]").forEach((button) => {
-              button.addEventListener("click", () => {
-                setLanguage(button.dataset.languageButton);
+            document
+              .querySelectorAll("[data-language-button]")
+              .forEach((button) => {
+                button.addEventListener("click", () => {
+                  setLanguage(button.dataset.languageButton);
+                });
               });
-            });
             setLanguage(currentLanguage);
 
             const sectionIds = [
