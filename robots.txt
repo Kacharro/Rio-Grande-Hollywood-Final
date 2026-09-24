@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riograndehollywood.com/sitemap.xml
