@@ -452,8 +452,13 @@
                   Hollywood, Florida's premier steakhouse dining experience
                   featuring more than 14 exquisite fire-roasted cuts of meat
                   carved tableside, an unlimited buffet, and authentic
-                  hospitality. We also have an extra space for big parties and
-                  events.
+                  hospitality.
+                </p>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant max-w-xl"
+                >
+                  We have a room with a capacity for more than 100 people for
+                  private events.
                 </p>
                 <!-- CTAs -->
                 <div
@@ -466,6 +471,18 @@
                     <span>View Menu</span>
                     <span class="material-symbols-outlined text-[18px] ml-2"
                       >menu_book</span
+                    >
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center h-12 px-space-xl rounded-DEFAULT bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_0_20px_-4px_rgba(230,110,42,0.5)] hover:bg-secondary hover:text-on-secondary transition-all"
+                    data-whatsapp-purpose="private-events"
+                    href="https://wa.me/13057241434?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20hosting%20a%20private%20event%20for%20more%20than%20100%20people%20at%20Rio%20Grande%20Steakhouse."
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <span>Inquire About Private Events</span>
+                    <span class="material-symbols-outlined text-[18px] ml-2"
+                      >event</span
                     >
                   </a>
                 </div>
@@ -1908,6 +1925,11 @@
               "Traditional Gaucho Tableside Grill Heritage":
                 "Tradicion gaucha de parrilla servida en la mesa",
               "All you can eat": "Todo lo que puedas comer",
+              "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic hospitality.":
+                "La experiencia de steakhouse mas destacada de Hollywood, Florida, con mas de 14 exquisitos cortes asados al fuego y servidos en la mesa, buffet ilimitado y autentica hospitalidad.",
+              "We have a room with a capacity for more than 100 people for private events.":
+                "Contamos con un salon con capacidad para mas de 100 personas para eventos privados.",
+              "Inquire About Private Events": "Consultar sobre Eventos Privados",
               "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic hospitality. We also have an extra space for big parties and events.":
                 "La experiencia de steakhouse mas destacada de Hollywood, Florida, con mas de 14 exquisitos cortes asados al fuego y servidos en la mesa, buffet ilimitado y autentica hospitalidad. Tambien contamos con un espacio adicional para fiestas grandes y eventos.",
               "View Menu": "Ver Menu",
@@ -2087,6 +2109,11 @@
               "Traditional Gaucho Tableside Grill Heritage":
                 "Tradicao gaucha de churrasco servido a mesa",
               "All you can eat": "Rodizio a vontade",
+              "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic hospitality.":
+                "A principal experiencia de steakhouse em Hollywood, Florida, com mais de 14 cortes selecionados assados na brasa e servidos a mesa, buffet ilimitado e autentica hospitalidade.",
+              "We have a room with a capacity for more than 100 people for private events.":
+                "Temos um salao com capacidade para mais de 100 pessoas para eventos privados.",
+              "Inquire About Private Events": "Consultar sobre Eventos Privados",
               "Hollywood, Florida's premier steakhouse dining experience featuring more than 14 exquisite fire-roasted cuts of meat carved tableside, an unlimited buffet, and authentic hospitality. We also have an extra space for big parties and events.":
                 "A principal experiencia de steakhouse em Hollywood, Florida, com mais de 14 cortes selecionados assados na brasa e servidos a mesa, buffet ilimitado e autentica hospitalidade. Tambem temos um espaco adicional para grandes festas e eventos.",
               "View Menu": "Ver Menu",
@@ -2277,7 +2304,9 @@
 
           function updateReservationLinks(language) {
             document
-              .querySelectorAll('a[href*="wa.me/13057241434"]')
+              .querySelectorAll(
+                'a[href*="wa.me/13057241434"]:not([data-whatsapp-purpose="private-events"])',
+              )
               .forEach((link) => {
                 link.href = `https://wa.me/13057241434?text=${encodeURIComponent(whatsappMessages[language] || whatsappMessages.en)}`;
               });
